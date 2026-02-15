@@ -37,3 +37,7 @@ Refer test-cases.md
 
 ## 🌍 Deployment
 Hosted using Firebase Hosting.
+
+Hosting URL: https://sportsbuddy-mohit-2026.web.app
+
+
