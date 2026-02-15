@@ -1,0 +1,317 @@
+/* General Styles */
+:root {
+    --neon-blue: #00f6ff;
+    --neon-purple: #8f00ff;
+    --dark-bg: #0a0f1c;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --border-glow: rgba(0, 246, 255, 0.4);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: #e5e7eb;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    border-bottom: 1px solid var(--border-glow);
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 15px var(--neon-blue);
+}
+
+header p {
+    color: #94a3b8;
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    background: rgba(2, 6, 23, 0.7);
+    border-bottom: 1px solid var(--border-glow);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+nav a {
+    font-family: 'Orbitron', sans-serif;
+    color: #e5e7eb;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--neon-blue);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Blog Layout */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.post {
+    display: none;
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--border-glow);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 0 25px rgba(0, 246, 255, 0.08);
+}
+
+.post.active {
+    display: block;
+}
+
+
+.post.active {
+    display: block;
+}
+.post img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--border-glow);
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.2);
+}
+
+
+.date {
+    font-size: 0.9em;
+    color: gray;
+}
+
+/* Comments */
+.comments {
+    margin-top: 20px;
+}
+
+.comments input,
+.comments textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.comments button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.comment {
+    background: #eee;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Dark Mode Button */
+#themeToggle {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark header,
+body.dark footer {
+    background: #1f1f1f;
+}
+
+body.dark nav {
+    background: #2a2a2a;
+}
+
+body.dark .post {
+    background: #1e1e1e;
+}
+
+body.dark .comment {
+    background: #2c2c2c;
+}
+
+body.dark #themeToggle {
+    background: #333;
+    color: white;
+}
+
+/* Smooth Transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Post Fade Animation */
+.post {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Image Animation */
+.post img {
+    animation: zoomIn 0.6s ease-in-out;
+}
+
+/* Button Hover Effect */
+button {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+button {
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+input, textarea {
+    background: rgba(2, 6, 23, 0.8);
+    color: white;
+    border: 1px solid var(--border-glow);
+    border-radius: 8px;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Comment Animation */
+.comment {
+    animation: slideUp 0.4s ease-in-out;
+}
+.comment {
+    background: rgba(15, 23, 42, 0.8);
+    border-left: 3px solid var(--neon-blue);
+    box-shadow: inset 0 0 10px rgba(0, 246, 255, 0.2);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+

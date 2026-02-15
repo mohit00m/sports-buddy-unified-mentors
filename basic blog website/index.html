@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Personal Blog</h1>
+        <p>Sharing thoughts, ideas & stories</p>
+        <button id="themeToggle">Dark Mode</button>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPost(0)">Technology</a></li>
+            <li><a href="#" onclick="showPost(1)">Travel</a></li>
+            <li><a href="#" onclick="showPost(2)">Lifestyle</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Posts -->
+    <main>
+<section class="post active reveal">
+
+            <h2>The Future of Technology</h2>
+           
+
+            <p class="date">Published on: 10 Jan 2026</p>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Technology">
+
+            <p>
+                Technology is evolving rapidly, shaping the way we live and work.
+                From artificial intelligence to cloud computing, innovation is everywhere.
+            </p>
+
+            <!-- Comment Section -->
+            <div class="comments">
+                <h3>Comments</h3>
+               
+
+                <div class="comment-list"></div>
+
+                <input type="text" placeholder="Your Name" class="name">
+                <textarea placeholder="Your Comment" class="message"></textarea>
+                <button onclick="addComment(this)">Post Comment</button>
+            </div>
+        </section>
+
+   <section class="post active reveal">
+
+            <h2>Exploring the World</h2>
+            
+
+            <p class="date">Published on: 8 Jan 2026</p>
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Travel">
+
+
+            <p>
+                Traveling opens your mind to new cultures, traditions, and experiences.
+                Every journey teaches valuable life lessons.
+            </p>
+
+            <div class="comments">
+                <h3>Comments</h3>
+                <div class="comment-list"></div>
+
+                <input type="text" placeholder="Your Name" class="name">
+                <textarea placeholder="Your Comment" class="message"></textarea>
+                <button onclick="addComment(this)">Post Comment</button>
+            </div>
+        </section>
+
+       <section class="post active reveal">
+
+            <h2>Healthy Lifestyle Tips</h2>
+            <p class="date">Published on: 5 Jan 2026</p>
+           <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80" alt="Lifestyle">
+
+            <p>
+                A healthy lifestyle includes good food, exercise, and a positive mindset.
+                Small daily habits can lead to a better life.
+            </p>
+
+            <div class="comments">
+                <h3>Comments</h3>
+                <div class="comment-list"></div>
+
+                <input type="text" placeholder="Your Name" class="name">
+                <textarea placeholder="Your Comment" class="message"></textarea>
+                <button onclick="addComment(this)">Post Comment</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Blog Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
