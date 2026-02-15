@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="scene">
+  <!-- BIG Sci-Fi Name Outside Calculator -->
+  <h1 class="sci-name">CLCULATOR</h1>
+
+  <!-- Calculator Container -->
+  <div class="calculator">
+    <!-- HUD Title Inside Calculator -->
+    <div class="hud-title">
+      MOHIT’S PROJECT <span>// 02</span>
+    </div>
+
+    <!-- Top Section: Calculator Title + Theme Toggle -->
+    <div class="top">
+      <h2>Calculator</h2>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Display -->
+    <input type="text" id="display" disabled />
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="clear">C</button>
+      <button class="operator">/</button>
+      <button class="operator">*</button>
+      <button class="operator">-</button>
+
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">+</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+
+      <button class="zero">0</button>
+      <button>.</button>
+      <button class="equals">=</button>
+    </div>
+  </div>
+
+  <!-- Optional: History Panel -->
+  <div class="history-panel">
+    <h3>History</h3>
+    <ul id="history"></ul>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
