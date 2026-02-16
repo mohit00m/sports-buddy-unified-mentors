@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Soils - Soil Farming Agent</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="nav">
+  <a href="dashboard.html">Dashboard</a>
+  <a href="distributors.html">Distributors</a>
+  <a href="login.html">Logout</a>
+</div>
+
+<div class="container">
+
+  <!-- Page Title -->
+  <div class="card">
+    <h1>🌱 Soil Management</h1>
+    <p>Add, edit and manage soil types and their characteristics.</p>
+  </div>
+
+  <!-- Add Soil Form -->
+  <div class="card">
+    <h2>Add New Soil</h2>
+
+    <input type="text" id="soilName" placeholder="Soil Name (e.g., Sandy Soil)">
+    
+    <input type="text" id="soilDesc" 
+           placeholder="Soil Description (e.g., Good drainage, low nutrients)">
+
+    <button id="addSoilBtn">Add Soil</button>
+  </div>
+
+  <!-- Soil List -->
+  <div class="card">
+    <h2>Available Soils</h2>
+    <ul id="soilList" style="list-style:none; padding:0;"></ul>
+  </div>
+
+</div>
+
+<!-- Script -->
+<script type="module" src="js/soil.js"></script>
+
+</body>
+</html>

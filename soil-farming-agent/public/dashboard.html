@@ -1,0 +1,26 @@
+<div class="stats">
+  <div class="stat-box">
+    <p>Total Soils</p>
+    <h2 id="totalSoils">0</h2>
+  </div>
+  <div class="stat-box">
+    <p>Total Distributors</p>
+    <h2 id="totalDistributors">0</h2>
+  </div>
+</div>
+
+<script type="module">
+import { db } from "./js/firebase-config.js";
+import { collection, getDocs }
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+async function loadStats() {
+  const soilSnap = await getDocs(collection(db, "soils"));
+  const distSnap = await getDocs(collection(db, "distributors"));
+
+  document.getElementById("totalSoils").textContent = soilSnap.size;
+  document.getElementById("totalDistributors").textContent = distSnap.size;
+}
+
+loadStats();
+</script>
